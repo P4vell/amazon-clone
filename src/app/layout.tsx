@@ -1,5 +1,6 @@
 import { PropsWithChildren } from "react";
 import type { Metadata } from "next";
+import { Navbar } from "@/components/navbar/Navbar";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -13,7 +14,10 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 };
